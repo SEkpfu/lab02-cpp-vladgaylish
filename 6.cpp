@@ -2,14 +2,11 @@
 using namespace std;
 
 int main() {
-    int x; 
-    cin >> x;
-    switch (x) {
-        case 5: cout << "отлично"; break;
-        case 4: cout << "хорошо"; break;
-        case 3: cout << "удовлетворительно"; break;
-        case 2:
-        case 1: cout << "плохо"; break;
-        default: cout << "неверно";
-    }
+    long long cnt = 0, sum = 0;
+    long long v;
+    do {
+        cin >> v;
+        if (v != 0 && ( (v & 1LL) == 0 )) { ++cnt; sum += v; }
+    } while (v != 0);
+    cout << cnt << " " << sum << "\n";
 }

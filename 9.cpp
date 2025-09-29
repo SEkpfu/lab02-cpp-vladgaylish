@@ -1,13 +1,11 @@
 #include <iostream>
 using namespace std;
 
-bool inA(double x, double y) { return false; }
-bool inB(double x, double y) { return false; }
-bool inC(double x, double y) { return false; }
-bool inD(double x, double y) { return false; }
-
 int main() {
-    double x,y;
-    cin >> x >> y;
-    cout << (inA(x,y) ? "Да" : "Нет");
+    int v, mx = 0, cnt = 0;
+    while (cin >> v && v != 0) {
+        if (v > mx) { mx = v; cnt = 1; }
+        else if (v == mx) ++cnt;
+    }
+    cout << cnt << "\n";
 }
